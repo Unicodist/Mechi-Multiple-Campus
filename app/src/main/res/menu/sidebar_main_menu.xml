@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Navigation">
+        <menu>
+            <item android:title="Home"/>
+            <item android:title="Contact"/>
+            <item android:title="Gallary"/>
+        </menu>
+    </item>
+    <item android:title="Download">
+        <menu>
+            <item android:title="Academic Calender"/>
+            <item android:title="Lesson Plan"/>
+            <item android:title="Work Plan"/>
+        </menu>
+    </item>
+</menu>

@@ -1,6 +1,5 @@
 package com.mmc.jhapa.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -9,21 +8,17 @@ import androidx.fragment.app.Fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.navigation.NavigationView;
 import com.mmc.jhapa.R;
-import com.mmc.jhapa.fragments.BlogFragment;
-import com.mmc.jhapa.fragments.NoticeFragment;
-import com.mmc.jhapa.fragments.TeamFragment;
+import com.mmc.jhapa.fragments.*;
 
 public class MainActivity extends AppCompatActivity {
 
     NavigationBarView bottomNavigationView;
+    NavigationView sidebar;
     Fragment fragment;
     Toolbar toolbar;
     DrawerLayout thisPage;
@@ -35,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
         bindViews();
         setBottomNavClickListener();
         initializeToolBar();
+        initializeSideBar();
+    }
+
+    private void initializeSideBar() {
+        sidebar.inflateMenu(R.menu.sidebar_main_menu);
     }
 
     @Override
@@ -52,14 +52,8 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setTitle(getString(R.string.app_name));
         toolbar.setNavigationIcon(R.drawable.ic_baseline_menu_24);
-        toolbar.inflateMenu(R.menu.toolbar_main_menu);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                thisPage.openDrawer(GravityCompat.START);
-            }
-        });
+        toolbar.setNavigationOnClickListener(view -> thisPage.openDrawer(GravityCompat.START));
     }
 
     private void setBottomNavClickListener() {
@@ -86,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void bindViews(){
+        sidebar = findViewById(R.id.navigationview_main);
         thisPage = findViewById(R.id.activity_main_drawer);
         toolbar = findViewById(R.id.main_toolbar);
         bottomNavigationView = findViewById(R.id.main_bottomnav);
