@@ -7,6 +7,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -48,9 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initializeToolBar() {
         setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setTitle(getString(R.string.app_name));
-        toolbar.setSubtitle(getString(R.string.college_address));
         toolbar.setNavigationIcon(R.drawable.ic_baseline_menu_24);
+        toolbar.inflateMenu(R.menu.toolbar_main_menu);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
