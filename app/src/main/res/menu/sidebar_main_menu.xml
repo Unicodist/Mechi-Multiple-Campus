@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Navigation">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_sidebar_home"
+            android:title="@string/home"
+            android:icon="@drawable/ic_baseline_home_24"/>
+        <item
+            android:id="@+id/menu_sidebar_contact"
+            android:title="@string/contact"
+            android:icon="@drawable/ic_baseline_contact_page_24"/>
+        <item
+            android:id="@+id/menu_sidebar_gallary"
+            android:title="@string/gallary"
+            android:icon="@drawable/ic_baseline_image_24"/>
+    </group>
+    <item android:title="@string/download">
         <menu>
-            <item android:title="Home"/>
-            <item android:title="Contact"/>
-            <item android:title="Gallary"/>
+            <item
+                android:id="@+id/menu_sidebar_download_academicCalender"
+                android:title="@string/academic_calender"
+                android:icon="@drawable/ic_baseline_calendar_month_24"/>
+            <item
+                android:id="@+id/menu_sidebar_download_lessonPlan"
+                android:title="@string/lesson_plan"
+                android:icon="@drawable/ic_baseline_auto_graph_24"/>
+            <item
+                android:id="@+id/menu_sidebar_download_workPlan"
+                android:title="@string/work_plan"
+                android:icon="@drawable/ic_baseline_grading_24"/>
         </menu>
     </item>
-    <item android:title="Download">
+    <item android:title="More">
         <menu>
-            <item android:title="Academic Calender"/>
-            <item android:title="Lesson Plan"/>
-            <item android:title="Work Plan"/>
+            <item
+                android:id="@+id/menu_sidebar_share"
+                android:title="Share"
+                android:icon="@drawable/ic_baseline_share_24"/>
+            <item
+                android:id="@+id/menu_sidebar_about_app"
+                android:title="About Application"
+                android:icon="@drawable/ic_baseline_android_24"/>
         </menu>
     </item>
 </menu>

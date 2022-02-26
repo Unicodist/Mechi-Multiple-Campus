@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment fragment;
     Toolbar toolbar;
     DrawerLayout thisPage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +34,6 @@ public class MainActivity extends AppCompatActivity {
         initializeSideBar();
     }
 
-    private void initializeSideBar() {
-        sidebar.inflateMenu(R.menu.sidebar_main_menu);
-    }
-
     @Override
     public void onBackPressed() {
         if (thisPage.isOpen()){
@@ -44,7 +41,10 @@ public class MainActivity extends AppCompatActivity {
         }
         else
             super.onBackPressed();
+    }
 
+    private void initializeSideBar() {
+        sidebar.inflateMenu(R.menu.sidebar_main_menu);
     }
 
     private void initializeToolBar() {
