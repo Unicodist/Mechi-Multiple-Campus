@@ -1,17 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Navigation">
-        <menu>
-            <item android:title="Home"/>
-            <item android:title="Contact"/>
-            <item android:title="Gallary"/>
-        </menu>
-    </item>
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Home"
+            android:icon="@drawable/ic_baseline_home_24"/>
+        <item
+            android:title="Contact"
+            android:icon="@drawable/ic_baseline_attach_email_24"/>
+        <item
+            android:title="Gallary"
+            android:icon="@drawable/ic_baseline_image_24"/>
+    </group>
     <item android:title="Download">
         <menu>
-            <item android:title="Academic Calender"/>
-            <item android:title="Lesson Plan"/>
-            <item android:title="Work Plan"/>
+            <item
+                android:title="Academic Calender"
+                android:icon="@drawable/ic_baseline_calendar_month_24"/>
+            <item
+                android:title="Lesson Plan"
+                android:icon="@drawable/ic_baseline_auto_graph_24"/>
+            <item
+                android:title="Work Plan"
+                android:icon="@drawable/ic_baseline_grading_24"/>
+        </menu>
+    </item>
+    <item android:title="More">
+        <menu>
+            <item
+                android:title="Share"
+                android:icon="@drawable/ic_baseline_share_24"/>
+            <item
+                android:title="About Application"
+                android:icon="@drawable/ic_baseline_android_24"/>
+        </menu>
+    </item>
+    <item android:title="Coming soon">
+        <menu>
+            <item
+                android:title="Results"
+                android:icon="@drawable/ic_baseline_data_thresholding_24"/>
+            <item
+                android:title="Notes"
+                android:icon="@drawable/ic_baseline_notes_24"/>
         </menu>
     </item>
 </menu>

@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/activity_splash_screen.xml" value="0.22826086956521738" />
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/fragment_blog.xml" value="0.22826086956521738" />
+        <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/fragment_contact.xml" value="0.10989583333333333" />
+        <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/fragment_gallery.xml" value="0.10989583333333333" />
+        <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/fragment_home.xml" value="0.10989583333333333" />
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/fragment_notice.xml" value="0.22826086956521738" />
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/fragment_team.xml" value="0.22826086956521738" />
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/navbar_header.xml" value="0.22826086956521738" />

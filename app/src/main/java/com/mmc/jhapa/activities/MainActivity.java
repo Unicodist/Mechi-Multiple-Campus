@@ -41,9 +41,15 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         if (thisPage.isOpen()){
             thisPage.closeDrawer(GravityCompat.START);
+            return;
         }
-        else
-            super.onBackPressed();
+        if(bottomNavigationView.getSelectedItemId() != R.id.bottom_navigation_home)
+        {
+            bottomNavigationView.getMenu().getItem(0).setChecked(true);
+            getSupportFragmentManager().beginTransaction().replace(R.id.activity_main_fragment_holder,new HomeFragment()).commit();
+            return;
+        }
+        super.onBackPressed();
 
     }
 
@@ -57,11 +63,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setBottomNavClickListener() {
-        fragment = new BlogFragment();
+        fragment = new HomeFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.activity_main_fragment_holder,fragment).commit();
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
+                case R.id.bottom_navigation_home:
+                    fragment = new HomeFragment();
+                    break;
                 case R.id.bottom_navigation_blog:
                     fragment = new BlogFragment();
                     break;
