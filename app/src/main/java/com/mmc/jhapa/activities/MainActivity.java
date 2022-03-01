@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment fragment;
     Toolbar toolbar;
     DrawerLayout thisPage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +32,6 @@ public class MainActivity extends AppCompatActivity {
         setBottomNavClickListener();
         initializeToolBar();
         initializeSideBar();
-    }
-
-    private void initializeSideBar() {
-        sidebar.inflateMenu(R.menu.sidebar_main_menu);
     }
 
     @Override
@@ -49,8 +46,10 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.activity_main_fragment_holder,new HomeFragment()).commit();
             return;
         }
-        super.onBackPressed();
+        super.onBackPressed();}
 
+    private void initializeSideBar() {
+        sidebar.inflateMenu(R.menu.sidebar_main_menu);
     }
 
     private void initializeToolBar() {

@@ -26,8 +26,8 @@
             android:id="@+id/main_bottomnav"
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize"
-            android:background="?android:attr/windowBackground"
             android:layout_alignParentBottom="true"
+            android:background="?android:attr/windowBackground"
             app:menu="@menu/bottom_navigation_menu" />
 
     </RelativeLayout>
