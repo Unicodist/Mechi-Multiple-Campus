@@ -36,7 +36,7 @@ public class BlogListAdapter extends ArrayAdapter<BlogPostModel> {
         TextView blogItemTitle = view.findViewById(R.id.listview_blog_item_title);
         TextView blogItemDate = view.findViewById(R.id.listview_blog_item_date);
 
-        blogItemImage.setImageBitmap(UrlDataServices.getImageFile());
+//        blogItemImage.setImageBitmap(UrlDataServices.getImageFile());
 
         return view;
     }
