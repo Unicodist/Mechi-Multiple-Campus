@@ -1,5 +1,6 @@
 package com.mmc.jhapa.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationBarView;
@@ -32,6 +34,28 @@ public class MainActivity extends AppCompatActivity {
         setBottomNavClickListener();
         initializeToolBar();
         initializeSideBar();
+        setSidebarMenuClickListener();
+    }
+
+    private void setSidebarMenuClickListener() {
+        sidebar.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.sidebar_menu_notes:
+                        fragment = new ComingSoonFragment();
+                        break;
+
+                    case R.id.sidebar_menu_results:
+                        fragment = new ComingSoonFragment();
+                        break;
+                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.activity_main_fragment_holder,fragment).commit();
+
+                thisPage.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
     }
 
     @Override

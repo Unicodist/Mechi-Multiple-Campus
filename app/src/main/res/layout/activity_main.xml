@@ -20,7 +20,9 @@
         <FrameLayout
             android:id="@+id/activity_main_fragment_holder"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_above="@+id/main_bottomnav"
+            android:layout_below="@+id/main_toolbar" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/main_bottomnav"

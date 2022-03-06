@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.mmc.jhapa.R;
 import com.mmc.jhapa.classes.models.adapters.BlogPostModel;
@@ -38,15 +40,26 @@ public class BlogFragment extends Fragment {
 
         fetchBlogPosts();
         populateBlogListView();
+        setBlogItemClickListener();
 
         return thisview;
 
     }
+
+    private void setBlogItemClickListener() {
+        blogPostListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(getActivity().getApplicationContext(), "Not implemented", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
     private void populateBlogListView() {
 
-//        blogPostListView = thisview.findViewById(R.id.blog_post_listview);
-//        BlogListAdapter adapter = new BlogListAdapter(getActivity().getApplicationContext(), R.layout.listview_blog_item, blogPosts);
-//        blogPostListView.setAdapter(adapter);
+        blogPostListView = thisview.findViewById(R.id.blog_post_listview);
+        BlogListAdapter adapter = new BlogListAdapter(getActivity().getApplicationContext(), R.layout.listview_blog_item, blogPosts);
+        blogPostListView.setAdapter(adapter);
 
     }
 

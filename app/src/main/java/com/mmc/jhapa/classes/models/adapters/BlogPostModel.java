@@ -4,12 +4,14 @@ public class BlogPostModel {
     private final String imageLink;
     private final String title;
     private final String date;
+    private final String author;
     private final String postLink;
 
-    public BlogPostModel(String url, String title, String date, String postLink){
+    public BlogPostModel(String url, String title, String author, String date, String postLink){
         this.imageLink = url;
         this.title = title;
         this.date = date;
+        this.author = author;
         this.postLink = postLink;
     }
 
@@ -19,6 +21,10 @@ public class BlogPostModel {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getAuthor(){
+        return author;
     }
 
     public String getDate() {

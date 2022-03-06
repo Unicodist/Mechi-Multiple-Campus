@@ -32,14 +32,12 @@
             <item
                 android:title="About Application"
                 android:icon="@drawable/ic_baseline_android_24"/>
-        </menu>
-    </item>
-    <item android:title="Coming soon">
-        <menu>
             <item
+                android:id="@+id/sidebar_menu_results"
                 android:title="Results"
                 android:icon="@drawable/ic_baseline_data_thresholding_24"/>
             <item
+                android:id="@+id/sidebar_menu_notes"
                 android:title="Notes"
                 android:icon="@drawable/ic_baseline_notes_24"/>
         </menu>

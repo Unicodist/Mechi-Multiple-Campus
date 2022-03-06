@@ -23,6 +23,7 @@ public class BlogListAdapter extends ArrayAdapter<BlogPostModel> {
     public BlogListAdapter(@NonNull Context context, int resource, @NonNull List<BlogPostModel> objects) {
         super(context, resource, objects);
         this.context = context;
+        this.blogModel = objects;
     }
 
     @NonNull
@@ -34,7 +35,13 @@ public class BlogListAdapter extends ArrayAdapter<BlogPostModel> {
 
         ImageView blogItemImage = view.findViewById(R.id.listview_blog_item_image);
         TextView blogItemTitle = view.findViewById(R.id.listview_blog_item_title);
+        TextView blogItemAuthor = view.findViewById(R.id.listview_blog_item_author);
         TextView blogItemDate = view.findViewById(R.id.listview_blog_item_date);
+
+        blogItemTitle.setText(blogModel.get(position).getTitle());
+        blogItemAuthor.setText(blogModel.get(position).getAuthor());
+        blogItemDate.setText(blogModel.get(position).getDate());
+        blogItemTitle.setText(blogModel.get(position).getTitle());
 
 //        blogItemImage.setImageBitmap(UrlDataServices.getImageFile());
 

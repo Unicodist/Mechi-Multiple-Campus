@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="5dp">
+    android:padding="10dp"
+    android:layout_margin="5dp">
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <TextView
         android:id="@+id/listview_blog_item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BCA students create an app"
+        android:text="Demo Blog Title"
         android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,13 +26,15 @@
         android:id="@+id/listview_blog_item_image"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:src="@drawable/ic_baseline_home_24" />
+        android:layout_gravity="center"
+        android:src="@drawable/tribhuvan_university_logo" />
 
     <TextView
         android:id="@+id/listview_blog_item_author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ashish Neupane"
+        android:text="By Demo author"
+        android:layout_gravity="right"
         android:textSize="15sp" />
 
     <TextView
@@ -36,6 +42,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2022-03-2"
+        android:layout_gravity="right"
         android:textSize="10dp" />
+    </LinearLayout>
 
-</LinearLayout>
+</androidx.cardview.widget.CardView>

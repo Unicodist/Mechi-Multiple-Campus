@@ -7,23 +7,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import com.mmc.jhapa.R;
-import com.mmc.jhapa.classes.models.adapters.NoticeModel;
-
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link NoticeFragment#newInstance} factory method to
+ * Use the {@link ComingSoonFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class NoticeFragment extends Fragment {
-
-    View thisview;
-    ListView noticeListView;
-    List<NoticeModel> notices;
+public class ComingSoonFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +26,7 @@ public class NoticeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public NoticeFragment() {
+    public ComingSoonFragment() {
         // Required empty public constructor
     }
 
@@ -44,11 +36,11 @@ public class NoticeFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment NoticeFragment.
+     * @return A new instance of fragment ComingSoonFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static NoticeFragment newInstance(String param1, String param2) {
-        NoticeFragment fragment = new NoticeFragment();
+    public static ComingSoonFragment newInstance(String param1, String param2) {
+        ComingSoonFragment fragment = new ComingSoonFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -69,21 +61,6 @@ public class NoticeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        thisview = inflater.inflate(R.layout.fragment_notice, container, false);
-
-        fetchNotices();
-        populateNotificationItems();
-        setNotificationClickListener();
-
-        return thisview;
-    }
-
-    private void setNotificationClickListener() {
-    }
-
-    private void populateNotificationItems() {
-    }
-
-    private void fetchNotices() {
+        return inflater.inflate(R.layout.fragment_coming_soon, container, false);
     }
 }
