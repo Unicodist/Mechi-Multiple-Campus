@@ -58,7 +58,7 @@ public class BlogFragment extends Fragment {
     private void populateBlogListView() {
 
         blogPostListView = thisview.findViewById(R.id.blog_post_listview);
-        BlogListAdapter adapter = new BlogListAdapter(getActivity().getApplicationContext(), R.layout.listview_blog_item, blogPosts);
+        BlogListAdapter adapter = new BlogListAdapter(getActivity().getApplicationContext(), R.layout.listview_item_blog, blogPosts);
         blogPostListView.setAdapter(adapter);
 
     }

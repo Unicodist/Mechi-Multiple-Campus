@@ -13,7 +13,6 @@ import androidx.annotation.Nullable;
 
 import com.mmc.jhapa.R;
 import com.mmc.jhapa.classes.models.adapters.BlogPostModel;
-import com.mmc.jhapa.services.UrlDataServices;
 
 import java.util.List;
 
@@ -31,7 +30,7 @@ public class BlogListAdapter extends ArrayAdapter<BlogPostModel> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         LayoutInflater inflater = LayoutInflater.from(this.context);
-        View view = inflater.inflate(R.layout.listview_blog_item,null,false);
+        View view = inflater.inflate(R.layout.listview_item_blog,null,false);
 
         ImageView blogItemImage = view.findViewById(R.id.listview_blog_item_image);
         TextView blogItemTitle = view.findViewById(R.id.listview_blog_item_title);

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/drawable/background_sidebar_header_layout.xml" value="0.121" />
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/activity_splash_screen.xml" value="0.22826086956521738" />
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/fragment_blog.xml" value="0.22826086956521738" />
@@ -13,7 +14,10 @@
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/fragment_notice.xml" value="0.22826086956521738" />
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/fragment_team.xml" value="0.22826086956521738" />
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/listview_blog_item.xml" value="0.22826086956521738" />
-        <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/navbar_header.xml" value="0.22826086956521738" />
+        <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/listview_item_blog.xml" value="0.12" />
+        <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/listview_item_notice.xml" value="0.10989583333333333" />
+        <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/listview_notice_item.xml" value="0.22826086956521738" />
+        <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/navbar_header.xml" value="0.1" />
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/layout/toolbar_main.xml" value="0.22826086956521738" />
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25" />
         <entry key="..\:/My Files/git repos/MechiMultipleCampus/app/src/main/res/menu/sidebar_main_menu.xml" value="0.25" />
